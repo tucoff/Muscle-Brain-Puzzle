@@ -8,6 +8,7 @@ public class PlayerBehaviour : MonoBehaviour
     public float cd = 0;
     public int elementClose = 0;
     public int inUseElement = 0;
+    public float maxCD = 2f;
 
     void Movement()
     {
@@ -33,7 +34,7 @@ public class PlayerBehaviour : MonoBehaviour
                 transform.position = GameObject.Find("S").transform.position;
             }
 
-            cd = 2f;
+            cd = maxCD;
             StartCoroutine(Cooldown());
         }
     }
