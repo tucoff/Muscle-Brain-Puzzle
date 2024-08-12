@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    //Variáveis de controle de movimento
     public bool N, S, L, O;
     public float cd = 0;
     public int elementClose = 0;
     public int inUseElement = 0;
     public float maxCD = 2f;
 
+    //Move o player de bloco em bloco
     void Movement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
@@ -41,12 +43,12 @@ public class PlayerBehaviour : MonoBehaviour
 
     void Update()
     {
-        if(cd == 0)
+        if(cd == 0) //Se o player não estiver em cooldown, ele pode se mover
         {
             Movement();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (elementClose != 0)
             {
@@ -60,7 +62,8 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    IEnumerator Cooldown()
+    //Tempo até que o player possa se mover novamente ("cd")
+    IEnumerator Cooldown() 
     {
         yield return new WaitForSeconds(cd);
         cd = 0;

@@ -7,10 +7,12 @@ public class FollowPlayer : MonoBehaviour
     public float speed = 1f;    
     void FixedUpdate()
     {
+        //Se existir um player, segue ele
         GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
         {
-            transform.position = Vector3.Lerp(transform.position, player.transform.position, Time.deltaTime*speed);
+            Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+            transform.position = Vector3.Lerp(transform.position, playerPos, Time.deltaTime*speed);
         }
     }
 }
