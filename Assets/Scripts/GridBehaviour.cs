@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class GridBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        for (int i = this.transform.childCount; i > 0; i--)
+        {
+            GameObject child = this.transform.GetChild(i - 1).gameObject;
+            Vector3 nextPosition = new Vector3(Mathf.Round(child.transform.position.x), Mathf.Round(child.transform.position.y), Mathf.Round(child.transform.position.z));
+            child.transform.position = nextPosition;
+        }
     }
 }
