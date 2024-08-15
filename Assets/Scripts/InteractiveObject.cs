@@ -7,10 +7,18 @@ public class InteractiveObject : MonoBehaviour
 {
     public bool isQuebravel;
     public bool isLuva;
+    public Element elementNeeded;
+    public GameObject objectToInteract;
 
     public void Interact(Directions direction)
     {
-        if(isQuebravel && GameObject.Find("Player").GetComponent<PlayerBehaviour>().luvas)
+        if(elementNeeded == GameObject.Find("Player").GetComponent<PlayerBehaviour>().inUseElement)
+        {
+            //Só funciona no código da porta, precisa ser modificado posteriormente
+            objectToInteract.SetActive(false);
+        }
+
+        if(isQuebravel && GameObject.Find("Player").GetComponent<PlayerBehaviour>().luvas && GameObject.Find("Player").GetComponent<PlayerBehaviour>().inUseElement == Element.Air)
         {
             Destroy(this.gameObject);
             switch (direction)
