@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utils;
 
 public class IsColliding : MonoBehaviour
 {
@@ -11,16 +12,16 @@ public class IsColliding : MonoBehaviour
     {
         switch (direction)
         {
-            case "N":
+            case "North":
                 transform.parent.GetComponent<PlayerBehaviour>().N = !isColliding;
                 break;
-            case "S":
+            case "South":
                 transform.parent.GetComponent<PlayerBehaviour>().S = !isColliding;
                 break;
-            case "L":
+            case "East":
                 transform.parent.GetComponent<PlayerBehaviour>().L = !isColliding;
                 break;
-            case "O":
+            case "West":
                 transform.parent.GetComponent<PlayerBehaviour>().O = !isColliding;
                 break;
         }
@@ -28,18 +29,21 @@ public class IsColliding : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag != "IF")
-        {   
-            if (other.gameObject.tag == "Elemental")
-            {
-                transform.parent.GetComponent<PlayerBehaviour>().elementClose = other.gameObject.GetComponent<ElementalBehaviour>().element;
-            }
-            isColliding = true;
+        if (other.gameObject.tag == "Elemental" && transform.parent.GetComponent<PlayerBehaviour>().direction.ToString() == direction)
+        {
+            transform.parent.GetComponent<PlayerBehaviour>().elementClose = other.gameObject.GetComponent<ElementalBehaviour>().element;
         }
-    }
+        if (other.gameObject.tag == "Interactive" && transform.parent.GetComponent<PlayerBehaviour>().direction.ToString() == direction)
+        {
+            transform.parent.GetComponent<PlayerBehaviour>().interactive = other.gameObject.GetComponent<ElementalBehaviour>().element;
+        }
+        isColliding = true;
 
+    }
     void OnTriggerExit(Collider other)
     {
         isColliding = false;
+        transform.parent.GetComponent<PlayerBehaviour>().elementClose = Element.Air;
+        transform.parent.GetComponent<PlayerBehaviour>().interactive = Element.None;
     }
 }

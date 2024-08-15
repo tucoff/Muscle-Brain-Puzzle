@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public float speed = 1f;    
+    public float speed = 1f;
     void FixedUpdate()
     {
         //Se existir um player, segue ele
@@ -12,7 +12,7 @@ public class FollowPlayer : MonoBehaviour
         if (player != null)
         {
             Vector3 playerPos = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, playerPos, Time.deltaTime*speed);
+            transform.position = Vector3.Lerp(transform.position, playerPos, Time.deltaTime * speed);
         }
     }
 }
