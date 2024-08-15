@@ -38,6 +38,7 @@ public class IsColliding : MonoBehaviour
             transform.parent.GetComponent<PlayerBehaviour>().interactive = other.gameObject.GetComponent<ElementalBehaviour>().element;
         }
         isColliding = true;
+
     }
     void OnTriggerExit(Collider other)
     {
