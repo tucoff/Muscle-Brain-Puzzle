@@ -10,9 +10,11 @@ public class PlayerBehaviour : MonoBehaviour
     public float cd = 0;
     public Element elementClose = Element.Air;
     public Element interactive = Element.None;
+    public GameObject objectInteracting;
     public Element inUseElement = Element.Air;
     public float maxCD = 2f;
     public Directions direction = Directions.None;
+    public bool luvas = false;
 
     //Move o player de bloco em bloco
     void Movement()
@@ -57,13 +59,16 @@ public class PlayerBehaviour : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (elementClose != Element.Air)
+            if (elementClose != Element.Air && luvas)
             {
                 inUseElement = elementClose;
             }
-            if (interactive != Element.None)
+
+            if (interactive == Element.None && objectInteracting != null)
             {
-                inUseElement = elementClose;
+                objectInteracting.GetComponent<InteractiveObject>().Interact(direction);
+                objectInteracting = null;
+                interactive = Element.None;
             }
         }
 

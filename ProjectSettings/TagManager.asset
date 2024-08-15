@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Elemental
   - IF
+  - Interactive
   layers:
   - Default
   - TransparentFX
