@@ -28,11 +28,14 @@ public class IsColliding : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Elemental")
-        {
-            transform.parent.GetComponent<PlayerBehaviour>().elementClose = other.gameObject.GetComponent<ElementalBehaviour>().element;
+        if (other.gameObject.tag != "IF")
+        {   
+            if (other.gameObject.tag == "Elemental")
+            {
+                transform.parent.GetComponent<PlayerBehaviour>().elementClose = other.gameObject.GetComponent<ElementalBehaviour>().element;
+            }
+            isColliding = true;
         }
-        isColliding = true;
     }
 
     void OnTriggerExit(Collider other)
