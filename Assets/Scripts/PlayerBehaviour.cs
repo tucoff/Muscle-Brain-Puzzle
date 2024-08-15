@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Utils;
 
 public class PlayerBehaviour : MonoBehaviour
@@ -62,6 +63,23 @@ public class PlayerBehaviour : MonoBehaviour
             if (elementClose != Element.Air && luvas)
             {
                 inUseElement = elementClose;
+                Color c = Color.white;
+                switch (inUseElement)
+                {
+                    case Element.Fire:
+                        c = Color.red;
+                        break;
+                    case Element.Ice:
+                        c = Color.blue;
+                        break;
+                    case Element.Lightning:
+                        c = Color.yellow;
+                        break;
+                    case Element.Air:
+                        c = Color.white;
+                        break;
+                }
+                GameObject.FindWithTag("CurrentElement").GetComponent<Image>().color = c;
             }
 
             if (interactive == Element.None && objectInteracting != null)
@@ -72,9 +90,10 @@ public class PlayerBehaviour : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && luvas)
         {
             inUseElement = Element.Air;
+            GameObject.FindWithTag("CurrentElement").GetComponent<Image>().color = Color.white;
         }
     }
 

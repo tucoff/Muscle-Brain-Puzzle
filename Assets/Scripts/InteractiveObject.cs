@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Utils;
 
 public class InteractiveObject : MonoBehaviour
@@ -43,6 +44,7 @@ public class InteractiveObject : MonoBehaviour
             GameObject.Find("Player").GetComponent<PlayerBehaviour>().luvas = true;
             isLuva = false;
             GameObject.Find("LuvasLoucas").SetActive(false);
+            GameObject.FindWithTag("CurrentElement").GetComponent<Image>().color = Color.white;
         }
         else
         {
