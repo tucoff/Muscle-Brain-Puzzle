@@ -11,12 +11,11 @@ public class IsColliding : MonoBehaviour
     void Start()
     {
         isColliding = false;
-        ChangeDirection();
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag != "IF")
+        if (other.gameObject.tag != "IF")
         {
             if (other.gameObject.tag == "Elemental" && transform.parent.GetComponent<PlayerBehaviour>().direction.ToString() == direction)
             {
@@ -36,7 +35,6 @@ public class IsColliding : MonoBehaviour
             }
             isColliding = true;
         }
-        ChangeDirection();
     }
     void OnTriggerExit(Collider other)
     {
@@ -44,25 +42,7 @@ public class IsColliding : MonoBehaviour
         transform.parent.GetComponent<PlayerBehaviour>().elementClose = Element.Air;
         transform.parent.GetComponent<PlayerBehaviour>().interactive = Element.None;
         transform.parent.GetComponent<PlayerBehaviour>().objectInteracting = null;
-        ChangeDirection();
     }
 
-    public void ChangeDirection()
-    {
-        switch (direction)
-        {
-            case "North":
-                transform.parent.GetComponent<PlayerBehaviour>().N = !isColliding;
-                break;
-            case "South":
-                transform.parent.GetComponent<PlayerBehaviour>().S = !isColliding;
-                break;
-            case "East":
-                transform.parent.GetComponent<PlayerBehaviour>().L = !isColliding;
-                break;
-            case "West":
-                transform.parent.GetComponent<PlayerBehaviour>().O = !isColliding;
-                break;
-        }
-    }
+
 }
