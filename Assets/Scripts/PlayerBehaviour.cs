@@ -67,11 +67,12 @@ public class PlayerBehaviour : MonoBehaviour
         Collider _hit = Physics.OverlapBox(_pos, new Vector3(.1f, .1f, .1f), Quaternion.identity, wallLayer).FirstOrDefault();
         if (_hit != null)
         {
-            if (_hit.transform.gameObject.tag == "Interactive")
+            if (_hit.transform.gameObject.GetComponent<InteractiveObject>())
             {
                 objectInteracting = _hit.transform.gameObject;
             }
-            else if (_hit.transform.gameObject.tag == "Elemental")
+            
+            if (_hit.transform.gameObject.GetComponent<ElementalBehaviour>())
             {
                 elementClose = _hit.transform.gameObject.GetComponent<ElementalBehaviour>().element;
             }
@@ -94,31 +95,13 @@ public class PlayerBehaviour : MonoBehaviour
         {
             if (elementClose != Element.Air && luvas)
             {
-                inUseElement = elementClose;
-                Color c = Color.white;
-                switch (inUseElement)
-                {
-                    case Element.Fire:
-                        c = Color.red;
-                        break;
-                    case Element.Ice:
-                        c = Color.blue;
-                        break;
-                    case Element.Lightning:
-                        c = Color.yellow;
-                        break;
-                    case Element.Air:
-                        c = Color.white;
-                        break;
-                }
-                GameObject.FindWithTag("CurrentElement").GetComponent<Image>().color = c;
+                Invoke("NewElement", 0.1f);
             }
 
-            if (interactive == Element.None && objectInteracting != null)
+            if (objectInteracting != null)
             {
                 objectInteracting.GetComponent<InteractiveObject>().Interact(direction);
                 objectInteracting = null;
-                interactive = Element.None;
             }
         }
 
@@ -134,5 +117,27 @@ public class PlayerBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(cd);
         cd = 0;
+    }
+
+    void NewElement()
+    {
+        inUseElement = elementClose;
+        Color c = Color.white;
+        switch (inUseElement)
+        {
+            case Element.Fire:
+                c = Color.red;
+                break;
+            case Element.Ice:
+                c = Color.blue;
+                break;
+            case Element.Lightning:
+                c = Color.yellow;
+                break;
+            case Element.Air:
+                c = Color.white;
+                break;
+        }
+        GameObject.FindWithTag("CurrentElement").GetComponent<Image>().color = c;
     }
 }

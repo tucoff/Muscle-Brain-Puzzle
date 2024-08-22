@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -350,11 +354,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2034128552}
-  - {fileID: 2038373580}
-  - {fileID: 84914690}
-  - {fileID: 2024975271}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &13811787
@@ -369,10 +369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4881a06f2bb4447b048933c32f51b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  N: 0
-  S: 0
-  L: 0
-  O: 0
   cd: 0
   elementClose: 0
   interactive: 0
@@ -381,6 +377,10 @@ MonoBehaviour:
   maxCD: 0.3
   direction: 0
   luvas: 0
+  m_Rigidbody: {fileID: 0}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!54 &13811788
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -646,6 +646,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -739,6 +743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -800,6 +808,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -951,7 +963,8 @@ GameObject:
   - component: {fileID: 63165997}
   - component: {fileID: 63165996}
   - component: {fileID: 63165995}
-  m_Layer: 0
+  - component: {fileID: 63165998}
+  m_Layer: 6
   m_Name: Porta Inquebravel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1044,154 +1057,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63165993}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &84914689
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 84914690}
-  - component: {fileID: 84914693}
-  - component: {fileID: 84914692}
-  - component: {fileID: 84914691}
-  - component: {fileID: 84914694}
-  - component: {fileID: 84914695}
-  m_Layer: 0
-  m_Name: East
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &84914690
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84914689}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 13811786}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &84914691
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84914689}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &84914692
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84914689}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &84914693
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84914689}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &84914694
+--- !u!114 &63165998
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84914689}
+  m_GameObject: {fileID: 63165993}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b291c431a7bf944594e0aa83e31844b, type: 3}
+  m_Script: {fileID: 11500000, guid: b09fa6cf948437440a4ca25005283dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: East
-  isColliding: 0
---- !u!54 &84914695
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 84914689}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  isQuebravel: 0
+  isLuva: 0
+  elementNeeded: 0
+  objectToInteract: {fileID: 0}
+  interactions:
+  - "N\xE3o posso arrombar ela, posso ser demitido."
+  interactionTime: 5
 --- !u!1001 &95733181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1740,7 +1624,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 457431779}
+    m_TransformParent: {fileID: 1585349868}
     m_Modifications:
     - target: {fileID: 2602230056476219720, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
       propertyPath: m_LocalScale.z
@@ -1752,7 +1636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2602230056476219720, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.040001
+      value: -10.040001
       objectReference: {fileID: 0}
     - target: {fileID: 2602230056476219720, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1795,6 +1679,10 @@ PrefabInstance:
       value: Generator
       objectReference: {fileID: 0}
     - target: {fileID: 8947449309173778132, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947449309173778132, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
       propertyPath: m_TagString
       value: Elemental
       objectReference: {fileID: 0}
@@ -1805,6 +1693,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8947449309173778132, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 136240154}
+    - targetCorrespondingSourceObject: {fileID: 8947449309173778132, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 136240159}
   m_SourcePrefab: {fileID: 100100000, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
 --- !u!1 &136240153 stripped
 GameObject:
@@ -1829,6 +1720,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2602230056476219720, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
   m_PrefabInstance: {fileID: 136240152}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &136240159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136240153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09fa6cf948437440a4ca25005283dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isQuebravel: 1
+  isLuva: 0
+  elementNeeded: 0
+  objectToInteract: {fileID: 0}
+  interactions:
+  - "Mam\xE3e n\xE3o ia gostar de me ver mexendo com eletricidade\u2026"
+  - "Mam\xE3e n\xE3o ia gostar de me ver mexendo com eletricidade\u2026"
+  - "Mam\xE3e n\xE3o ia gostar de me ver mexendo com eletricidade\u2026"
+  interactionTime: 5
 --- !u!1 &149765871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,7 +1753,7 @@ GameObject:
   - component: {fileID: 149765875}
   - component: {fileID: 149765874}
   - component: {fileID: 149765873}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1947,7 +1859,7 @@ GameObject:
   - component: {fileID: 159294159}
   - component: {fileID: 159294158}
   - component: {fileID: 159294161}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Porta Inquebravel
   m_TagString: Interactive
   m_Icon: {fileID: 0}
@@ -2056,6 +1968,9 @@ MonoBehaviour:
   isLuva: 0
   elementNeeded: 0
   objectToInteract: {fileID: 0}
+  interactions:
+  - "N\xE3o tenho a chave dessa porta\u2026"
+  interactionTime: 5
 --- !u!1 &161188444
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,9 +1983,9 @@ GameObject:
   - component: {fileID: 161188448}
   - component: {fileID: 161188447}
   - component: {fileID: 161188446}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (4)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2474,6 +2389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InvisibleBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 5822727494965353010, guid: 6c4e8071bad07d14b9b218ac11193e43, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2641,6 +2560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2702,6 +2625,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3068,6 +2995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3420,9 +3351,9 @@ GameObject:
   - component: {fileID: 400908715}
   - component: {fileID: 400908714}
   - component: {fileID: 400908713}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (15)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3765,6 +3696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3899,7 +3834,7 @@ GameObject:
   - component: {fileID: 431399069}
   - component: {fileID: 431399068}
   - component: {fileID: 431399067}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4405,6 +4340,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4529,6 +4468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4569,7 +4512,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 136240155}
   - {fileID: 1470036759}
   - {fileID: 582393785}
   - {fileID: 480622758}
@@ -4679,7 +4621,7 @@ GameObject:
   - component: {fileID: 480622761}
   - component: {fileID: 480622760}
   - component: {fileID: 480622759}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5078,7 +5020,7 @@ GameObject:
   - component: {fileID: 513737768}
   - component: {fileID: 513737767}
   - component: {fileID: 513737766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5237,6 +5179,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2602230056476219720, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
   m_PrefabInstance: {fileID: 515632234}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &533819282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+  m_PrefabInstance: {fileID: 1805799506}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &541158489
 GameObject:
   m_ObjectHideFlags: 0
@@ -5354,7 +5301,7 @@ GameObject:
   - component: {fileID: 548671662}
   - component: {fileID: 548671661}
   - component: {fileID: 548671660}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5525,9 +5472,9 @@ GameObject:
   - component: {fileID: 553642023}
   - component: {fileID: 553642022}
   - component: {fileID: 553642021}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (8)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5758,7 +5705,7 @@ GameObject:
   - component: {fileID: 568507613}
   - component: {fileID: 568507612}
   - component: {fileID: 568507611}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5969,6 +5916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6128,7 +6079,7 @@ GameObject:
   - component: {fileID: 582393788}
   - component: {fileID: 582393787}
   - component: {fileID: 582393786}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6595,6 +6546,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6679,7 +6634,7 @@ GameObject:
   - component: {fileID: 611579143}
   - component: {fileID: 611579142}
   - component: {fileID: 611579141}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6948,6 +6903,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7137,9 +7096,9 @@ GameObject:
   - component: {fileID: 660048013}
   - component: {fileID: 660048012}
   - component: {fileID: 660048011}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (17)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7348,6 +7307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (54)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7475,9 +7438,9 @@ GameObject:
   - component: {fileID: 694274160}
   - component: {fileID: 694274159}
   - component: {fileID: 694274158}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (16)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7620,6 +7583,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7642,7 +7609,7 @@ GameObject:
   - component: {fileID: 699527777}
   - component: {fileID: 699527776}
   - component: {fileID: 699527775}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7969,9 +7936,9 @@ GameObject:
   - component: {fileID: 712171622}
   - component: {fileID: 712171621}
   - component: {fileID: 712171620}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (9)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8176,6 +8143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8237,6 +8208,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8560,6 +8535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (42)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8684,6 +8663,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8750,6 +8733,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8822,6 +8809,10 @@ PrefabInstance:
       value: Computador
       objectReference: {fileID: 0}
     - target: {fileID: 8947449309173778132, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947449309173778132, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
       propertyPath: m_TagString
       value: Interactive
       objectReference: {fileID: 0}
@@ -8877,6 +8868,11 @@ MonoBehaviour:
   isLuva: 0
   elementNeeded: 3
   objectToInteract: {fileID: 63165993}
+  interactions:
+  - "SABIA!! Devia ter escutado papai e ter cursado programa\xE7\xE3o."
+  - "FOI SEM QUERERRRR!!!! L\xE1 se vai meu d\xE9cimo terceiro.. :((("
+  - "SABIA!! Devia ter escutado papai e ter cursado programa\xE7\xE3o."
+  interactionTime: 5
 --- !u!1001 &815370881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8938,6 +8934,10 @@ PrefabInstance:
       value: Mesa
       objectReference: {fileID: 0}
     - target: {fileID: 8947449309173778132, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947449309173778132, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
       propertyPath: m_TagString
       value: Interactive
       objectReference: {fileID: 0}
@@ -8954,6 +8954,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8947449309173778132, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 815370886}
+    - targetCorrespondingSourceObject: {fileID: 8947449309173778132, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 815370890}
   m_SourcePrefab: {fileID: 100100000, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
 --- !u!4 &815370882 stripped
 Transform:
@@ -8976,6 +8979,23 @@ MonoBehaviour:
   isLuva: 1
   elementNeeded: 0
   objectToInteract: {fileID: 0}
+  interactions:
+  - "Que mesinha bonitinha, pena que ela t\xE1 na beira pro infinito vazio de bits. "
+  - Sempre sonhei em ter uma dessas.
+  interactionTime: 5
+--- !u!114 &815370890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181960195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40822e849c72ba04fa4328d412767f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  element: 4
 --- !u!1 &815420988
 GameObject:
   m_ObjectHideFlags: 0
@@ -9092,9 +9112,9 @@ GameObject:
   - component: {fileID: 818414469}
   - component: {fileID: 818414468}
   - component: {fileID: 818414467}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (13)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9236,6 +9256,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9524,9 +9548,9 @@ GameObject:
   - component: {fileID: 825730161}
   - component: {fileID: 825730160}
   - component: {fileID: 825730159}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (23)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9862,7 +9886,7 @@ GameObject:
   - component: {fileID: 852553252}
   - component: {fileID: 852553251}
   - component: {fileID: 852553250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9967,7 +9991,7 @@ GameObject:
   - component: {fileID: 853645716}
   - component: {fileID: 853645715}
   - component: {fileID: 853645714}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10138,9 +10162,9 @@ GameObject:
   - component: {fileID: 860504173}
   - component: {fileID: 860504172}
   - component: {fileID: 860504171}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (3)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10455,16 +10479,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885207776}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99304867, y: 0.99304867, z: 0.99304867}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1446055206}
+  m_Father: {fileID: 1499557001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.6977, y: 0.11483}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 615.4282, y: 49.771}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &885207778
@@ -10616,6 +10640,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10740,6 +10768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10802,6 +10834,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10863,6 +10899,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11581,7 +11621,7 @@ GameObject:
   - component: {fileID: 1008895665}
   - component: {fileID: 1008895664}
   - component: {fileID: 1008895663}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11792,6 +11832,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11986,6 +12030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12110,6 +12158,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12132,9 +12184,9 @@ GameObject:
   - component: {fileID: 1091396684}
   - component: {fileID: 1091396683}
   - component: {fileID: 1091396682}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (2)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12286,6 +12338,10 @@ PrefabInstance:
       value: Parede Fragil
       objectReference: {fileID: 0}
     - target: {fileID: 8947449309173778132, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8947449309173778132, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
       propertyPath: m_TagString
       value: Interactive
       objectReference: {fileID: 0}
@@ -12323,6 +12379,10 @@ MonoBehaviour:
   isLuva: 0
   elementNeeded: 0
   objectToInteract: {fileID: 0}
+  interactions:
+  - "Essa parede t\xE1 meio fofa, espero que consertem logo. :D"
+  - "VISH!!!! Acho que isso vai ser descontado do meu sal\xE1rio. :("
+  interactionTime: 5
 --- !u!1001 &1099249338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12436,6 +12496,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12564,6 +12628,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12701,6 +12769,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13117,6 +13189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13205,9 +13281,9 @@ GameObject:
   - component: {fileID: 1184160421}
   - component: {fileID: 1184160420}
   - component: {fileID: 1184160419}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (11)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13372,7 +13448,7 @@ GameObject:
   - component: {fileID: 1216907214}
   - component: {fileID: 1216907213}
   - component: {fileID: 1216907212}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13648,6 +13724,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14006,6 +14086,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14067,6 +14151,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14327,6 +14415,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14876,6 +14968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (63)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15073,6 +15169,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15348,9 +15448,9 @@ GameObject:
   - component: {fileID: 1356480928}
   - component: {fileID: 1356480927}
   - component: {fileID: 1356480926}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (1)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15492,6 +15592,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15788,6 +15892,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15810,7 +15918,7 @@ GameObject:
   - component: {fileID: 1397111969}
   - component: {fileID: 1397111968}
   - component: {fileID: 1397111967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15977,9 +16085,9 @@ GameObject:
   - component: {fileID: 1407961451}
   - component: {fileID: 1407961450}
   - component: {fileID: 1407961449}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (8)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16227,6 +16335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16311,7 +16423,7 @@ GameObject:
   - component: {fileID: 1418227381}
   - component: {fileID: 1418227380}
   - component: {fileID: 1418227379}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16635,7 +16747,6 @@ RectTransform:
   - {fileID: 1158325306}
   - {fileID: 1162362798}
   - {fileID: 1499557001}
-  - {fileID: 885207777}
   m_Father: {fileID: 815420992}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -16759,7 +16870,7 @@ GameObject:
   - component: {fileID: 1456267049}
   - component: {fileID: 1456267048}
   - component: {fileID: 1456267047}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16864,7 +16975,7 @@ GameObject:
   - component: {fileID: 1470036762}
   - component: {fileID: 1470036761}
   - component: {fileID: 1470036760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17008,6 +17119,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17167,9 +17282,9 @@ GameObject:
   - component: {fileID: 1481769370}
   - component: {fileID: 1481769369}
   - component: {fileID: 1481769368}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (5)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17374,6 +17489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17462,7 +17581,7 @@ GameObject:
   - component: {fileID: 1499557003}
   - component: {fileID: 1499557002}
   m_Layer: 5
-  m_Name: Borda
+  m_Name: InteractionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17479,7 +17598,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.007, y: 1.007, z: 1.007}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 885207777}
   m_Father: {fileID: 1446055206}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -17596,7 +17716,7 @@ GameObject:
   - component: {fileID: 1502855594}
   - component: {fileID: 1502855593}
   - component: {fileID: 1502855592}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17767,9 +17887,9 @@ GameObject:
   - component: {fileID: 1515594918}
   - component: {fileID: 1515594917}
   - component: {fileID: 1515594916}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (10)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18114,9 +18234,9 @@ GameObject:
   - component: {fileID: 1568876277}
   - component: {fileID: 1568876276}
   - component: {fileID: 1568876275}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (19)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18357,6 +18477,7 @@ Transform:
   - {fileID: 1258497097}
   - {fileID: 1596914403}
   - {fileID: 809796582}
+  - {fileID: 136240155}
   m_Father: {fileID: 576855682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1585349869
@@ -18716,6 +18837,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (49)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18843,6 +18968,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19686,9 +19815,9 @@ GameObject:
   - component: {fileID: 1704889106}
   - component: {fileID: 1704889105}
   - component: {fileID: 1704889104}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (7)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19830,6 +19959,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20251,6 +20384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20273,7 +20410,7 @@ GameObject:
   - component: {fileID: 1744197212}
   - component: {fileID: 1744197211}
   - component: {fileID: 1744197210}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20383,9 +20520,9 @@ GameObject:
   - component: {fileID: 1756612143}
   - component: {fileID: 1756612142}
   - component: {fileID: 1756612141}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (6)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20488,7 +20625,7 @@ GameObject:
   - component: {fileID: 1757574530}
   - component: {fileID: 1757574529}
   - component: {fileID: 1757574528}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20695,16 +20832,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1805799512}
   m_SourcePrefab: {fileID: 100100000, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
 --- !u!4 &1805799507 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7875425331601577006, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
   m_PrefabInstance: {fileID: 1805799506}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1805799512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533819282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09fa6cf948437440a4ca25005283dc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isQuebravel: 0
+  isLuva: 0
+  elementNeeded: 0
+  objectToInteract: {fileID: 0}
+  interactions:
+  - Que geladinha essa parede. :3
+  interactionTime: 5
 --- !u!1001 &1854895480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21365,6 +21528,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21588,6 +21755,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (09)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21712,6 +21883,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21800,9 +21975,9 @@ GameObject:
   - component: {fileID: 1928149008}
   - component: {fileID: 1928149007}
   - component: {fileID: 1928149006}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (18)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22394,6 +22569,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22522,6 +22701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22544,9 +22727,9 @@ GameObject:
   - component: {fileID: 2002608253}
   - component: {fileID: 2002608252}
   - component: {fileID: 2002608251}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (14)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22883,6 +23066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22959,154 +23146,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2602230056476219720, guid: 5a3284a9ce6aa8e43a7d6aaa7931eb8c, type: 3}
   m_PrefabInstance: {fileID: 2018726853}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2024975270
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2024975271}
-  - component: {fileID: 2024975274}
-  - component: {fileID: 2024975273}
-  - component: {fileID: 2024975272}
-  - component: {fileID: 2024975275}
-  - component: {fileID: 2024975276}
-  m_Layer: 0
-  m_Name: West
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2024975271
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024975270}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 13811786}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &2024975272
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024975270}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &2024975273
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024975270}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2024975274
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024975270}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2024975275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024975270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b291c431a7bf944594e0aa83e31844b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: West
-  isColliding: 0
---- !u!54 &2024975276
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024975270}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &2031268254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23169,154 +23208,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7875425331601577006, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
   m_PrefabInstance: {fileID: 2031268254}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2034128551
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2034128552}
-  - component: {fileID: 2034128555}
-  - component: {fileID: 2034128554}
-  - component: {fileID: 2034128553}
-  - component: {fileID: 2034128556}
-  - component: {fileID: 2034128557}
-  m_Layer: 0
-  m_Name: North
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2034128552
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034128551}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 13811786}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &2034128553
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034128551}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &2034128554
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034128551}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2034128555
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034128551}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2034128556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034128551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b291c431a7bf944594e0aa83e31844b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: North
-  isColliding: 0
---- !u!54 &2034128557
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034128551}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &2034653161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23368,6 +23259,10 @@ PrefabInstance:
     - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
       propertyPath: m_Name
       value: WallBlock (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -23431,6 +23326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallBlock (60)
       objectReference: {fileID: 0}
+    - target: {fileID: 8459089453976560116, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23441,154 +23340,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7875425331601577006, guid: 0beedf5fe4abdd6479b1aec917558a8a, type: 3}
   m_PrefabInstance: {fileID: 2036122135}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2038373579
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2038373580}
-  - component: {fileID: 2038373583}
-  - component: {fileID: 2038373582}
-  - component: {fileID: 2038373581}
-  - component: {fileID: 2038373584}
-  - component: {fileID: 2038373585}
-  m_Layer: 0
-  m_Name: South
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2038373580
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038373579}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 13811786}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &2038373581
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038373579}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &2038373582
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038373579}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2038373583
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038373579}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2038373584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038373579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b291c431a7bf944594e0aa83e31844b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direction: South
-  isColliding: 0
---- !u!54 &2038373585
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2038373579}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1001 &2047529212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23795,9 +23546,9 @@ GameObject:
   - component: {fileID: 2059432971}
   - component: {fileID: 2059432970}
   - component: {fileID: 2059432969}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (12)
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24028,7 +23779,7 @@ GameObject:
   - component: {fileID: 2079967909}
   - component: {fileID: 2079967908}
   - component: {fileID: 2079967907}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: InvisibleBlock (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24247,6 +23998,10 @@ MonoBehaviour:
   isLuva: 0
   elementNeeded: 0
   objectToInteract: {fileID: 0}
+  interactions:
+  - "T\xE1 escrito Q\xEAicarde, que nome engra\xE7ado, o pai se divertiu no cart\xF3rio.
+    >:DD KKKKKKKKKK"
+  interactionTime: 5
 --- !u!1 &2095924932
 GameObject:
   m_ObjectHideFlags: 0
