@@ -15,7 +15,7 @@ public class CurrentLevel : MonoBehaviour
 
     public void ChangeLevel(int n)
     {
-        if(currentLevel != n)
+        if (currentLevel != n)
         {
             currentLevel = n;
             Camera.main.transform.position = levelsCameraPositions[currentLevel - 1].position;
