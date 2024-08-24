@@ -10862,12 +10862,12 @@ GameObject:
   - component: {fileID: 924089666}
   - component: {fileID: 924089668}
   m_Layer: 5
-  m_Name: WakeUp
+  m_Name: WaknUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &924089665
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10935,7 +10935,7 @@ Animator:
   m_GameObject: {fileID: 924089664}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7ed27c5fbafcfb140964672dea19d297, type: 2}
+  m_Controller: {fileID: 9100000, guid: 72e45bd01e08a484f88a39662f46e806, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -15014,6 +15014,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
+  walking: 0
+  animator: 0
 --- !u!1001 &1319930753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21410,6 +21412,7 @@ GameObject:
   - component: {fileID: 1899946957}
   - component: {fileID: 1899946958}
   - component: {fileID: 1899946959}
+  - component: {fileID: 1899946960}
   m_Layer: 0
   m_Name: PlayerBody
   m_TagString: Untagged
@@ -21445,6 +21448,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
+  walking: 0
+  animator: 1
 --- !u!212 &1899946957
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21530,6 +21535,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1899946960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899946951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1805fab5f9b7f04e956203f2a927547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1899946959}
+  direction: 0
+  walking: 0
 --- !u!1001 &1903688836
 PrefabInstance:
   m_ObjectHideFlags: 0
