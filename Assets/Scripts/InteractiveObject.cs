@@ -14,6 +14,7 @@ public class InteractiveObject : MonoBehaviour
     public string[] interactions;
     public float interactionTime = 5f;
     TextMeshProUGUI interactionText;
+    public AudioClip audioClip = null;
 
     private void Start()
     {
@@ -52,12 +53,19 @@ public class InteractiveObject : MonoBehaviour
         }
     }
 
+    bool firstTime = true;
     void ShowInteraction(string interaction, float time)
     {
         interactionText.text = interaction;
         interactionText.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = interaction;
         interactionText.gameObject.transform.parent.gameObject.SetActive(true);
         StartCoroutine(HideInteraction(interaction,time));
+        if (!firstTime)
+        {
+            GameObject.Find("PlayerBody").GetComponent<AudioSource>().clip = audioClip;
+            GameObject.Find("PlayerBody").GetComponent<AudioSource>().Play();
+        }
+        else { firstTime = false; } 
     }
 
     IEnumerator HideInteraction(string interaction, float time)
