@@ -30,6 +30,8 @@ public class InteractiveObject : MonoBehaviour
             if (objectToInteract != null)
             {
                 ShowInteraction(interactions[2], interactionTime);
+                GameObject.Find("Player").GetComponent<PlayerBehaviour>().inUseElement = Element.Air;
+                GameObject.FindWithTag("CurrentElement").GetComponent<Image>().color = Color.white;
                 objectToInteract.SetActive(false);
             }
         }
