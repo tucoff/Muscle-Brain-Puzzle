@@ -27,7 +27,9 @@ public class InteractiveObject : MonoBehaviour
 
     public void Interact(Directions direction)
     {
-        if (elementNeeded == GameObject.Find("Player").GetComponent<PlayerBehaviour>().inUseElement)
+        Element currentInUseElement = GameObject.Find("Player").GetComponent<PlayerBehaviour>().inUseElement;
+
+        if (elementNeeded == currentInUseElement)
         {
             //Só funciona no código da porta, precisa ser modificado posteriormente
             if (objectToInteract != null)
@@ -40,7 +42,7 @@ public class InteractiveObject : MonoBehaviour
             }
         }
 
-        if (isQuebravel && GameObject.Find("Player").GetComponent<PlayerBehaviour>().luvas && GameObject.Find("Player").GetComponent<PlayerBehaviour>().inUseElement == Element.Air)
+        if (isQuebravel && GameObject.Find("Player").GetComponent<PlayerBehaviour>().luvas && currentInUseElement == Element.Air)
         {
             ShowInteraction(interactions[1], interactionTime);
             emotionsImg.sprite = emotions[1];
