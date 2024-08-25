@@ -79,6 +79,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
         else
         {
+            objectInteracting = null;
             elementClose = Element.Air;
         }
         return _hit != null;
