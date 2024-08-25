@@ -12,33 +12,40 @@ public class InteractiveObject : MonoBehaviour
     public Element elementNeeded;
     public GameObject objectToInteract;
     public string[] interactions;
+    public Sprite[] emotions;
     public float interactionTime = 5f;
-    TextMeshProUGUI interactionText;
+    Text interactionText;
+    Image emotionsImg;
     public AudioClip audioClip = null;
 
     private void Start()
     {
-        interactionText = GameObject.Find("InteractionText").GetComponent<TextMeshProUGUI>();
+        interactionText = GameObject.Find("InteractionText").GetComponent<Text>();
+        emotionsImg = GameObject.Find("EmotionImg").GetComponent<Image>();
         ShowInteraction(interactions[0], 0.1f);
     }
 
     public void Interact(Directions direction)
     {
-        if (elementNeeded == GameObject.Find("Player").GetComponent<PlayerBehaviour>().inUseElement)
+        Element currentInUseElement = GameObject.Find("Player").GetComponent<PlayerBehaviour>().inUseElement;
+
+        if (elementNeeded == currentInUseElement)
         {
             //Só funciona no código da porta, precisa ser modificado posteriormente
             if (objectToInteract != null)
             {
                 ShowInteraction(interactions[2], interactionTime);
+                emotionsImg.sprite = emotions[2];
                 GameObject.Find("Player").GetComponent<PlayerBehaviour>().inUseElement = Element.Air;
                 GameObject.FindWithTag("CurrentElement").GetComponent<Image>().color = Color.white;
                 objectToInteract.SetActive(false);
             }
         }
 
-        if (isQuebravel && GameObject.Find("Player").GetComponent<PlayerBehaviour>().luvas && GameObject.Find("Player").GetComponent<PlayerBehaviour>().inUseElement == Element.Air)
+        if (isQuebravel && GameObject.Find("Player").GetComponent<PlayerBehaviour>().luvas && currentInUseElement == Element.Air)
         {
             ShowInteraction(interactions[1], interactionTime);
+            emotionsImg.sprite = emotions[1];
             Destroy(this.gameObject, 0.1f);
         }
         else if (isLuva)
@@ -48,10 +55,12 @@ public class InteractiveObject : MonoBehaviour
             isLuva = false;
             GameObject.Find("LuvasLoucas").SetActive(false);
             ShowInteraction(interactions[1], interactionTime);
+            emotionsImg.sprite = emotions[1];
         }
         else
         {
             ShowInteraction(interactions[0], interactionTime);
+            emotionsImg.sprite = emotions[0];
         }
     }
 
@@ -59,7 +68,6 @@ public class InteractiveObject : MonoBehaviour
     void ShowInteraction(string interaction, float time)
     {
         interactionText.text = interaction;
-        interactionText.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = interaction;
         interactionText.gameObject.transform.parent.gameObject.SetActive(true);
         StartCoroutine(HideInteraction(interaction,time));
         if (!firstTime)
@@ -77,7 +85,6 @@ public class InteractiveObject : MonoBehaviour
         {
             interactionText.gameObject.transform.parent.gameObject.SetActive(false);
             interactionText.text = "";
-            interactionText.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "";
         }
     }
 }
