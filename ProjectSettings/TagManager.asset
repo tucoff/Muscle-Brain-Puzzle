@@ -7,6 +7,8 @@ TagManager:
   - Elemental
   - IF
   - Interactive
+  - CurrentElement
+  - Walls
   layers:
   - Default
   - TransparentFX
