@@ -5722,6 +5722,10 @@ PrefabInstance:
       value: Computador
       objectReference: {fileID: 0}
     - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b18d32c3a8804b4468b632caafb4195e, type: 3}
+    - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
       propertyPath: emotions.Array.data[1]
       value: 
       objectReference: {fileID: 2059890269, guid: ee879a932c15011419c86de5b801c7b0, type: 3}
@@ -6532,6 +6536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computador
       objectReference: {fileID: 0}
+    - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b18d32c3a8804b4468b632caafb4195e, type: 3}
     - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
       propertyPath: emotions.Array.data[0]
       value: 
@@ -13570,6 +13578,10 @@ PrefabInstance:
       value: Computador
       objectReference: {fileID: 0}
     - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b18d32c3a8804b4468b632caafb4195e, type: 3}
+    - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
       propertyPath: emotions.Array.data[0]
       value: 
       objectReference: {fileID: 1584256316, guid: ee879a932c15011419c86de5b801c7b0, type: 3}
@@ -19212,6 +19224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computador
       objectReference: {fileID: 0}
+    - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b18d32c3a8804b4468b632caafb4195e, type: 3}
     - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
       propertyPath: emotions.Array.data[0]
       value: 
@@ -27076,6 +27092,10 @@ PrefabInstance:
       value: Computador
       objectReference: {fileID: 0}
     - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b18d32c3a8804b4468b632caafb4195e, type: 3}
+    - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
       propertyPath: interactions.Array.data[0]
       value: Olha, a receita da vovo!
       objectReference: {fileID: 0}
@@ -27539,6 +27559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computador
       objectReference: {fileID: 0}
+    - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b18d32c3a8804b4468b632caafb4195e, type: 3}
     - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
       propertyPath: emotions.Array.data[1]
       value: 
@@ -31612,6 +31636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Computador
       objectReference: {fileID: 0}
+    - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b18d32c3a8804b4468b632caafb4195e, type: 3}
     - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
       propertyPath: emotions.Array.data[0]
       value: 
