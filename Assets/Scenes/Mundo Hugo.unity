@@ -27059,6 +27059,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1407440650}
     m_Modifications:
+    - target: {fileID: 3136346994852951086, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7dd6002207ed0fb45845e6daab7d7a91, type: 2}
     - target: {fileID: 4493582499638659900, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
       propertyPath: m_Name
       value: Computador
@@ -27533,8 +27537,8 @@ PrefabInstance:
       objectReference: {fileID: 2059890269, guid: ee879a932c15011419c86de5b801c7b0, type: 3}
     - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
       propertyPath: interactions.Array.data[0]
-      value: "Enigma? J\xE1 ouvi essa palavra em algum lugar, \xE9 tipo uma cor de
-        esmalte n\xE9?"
+      value: Enigma? Ja ouvi essa palavra em algum lugar, eh tipo uma cor de esmalte
+        ne?
       objectReference: {fileID: 0}
     - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
       propertyPath: interactions.Array.data[1]
@@ -27542,8 +27546,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6701158188454501159, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
       propertyPath: interactions.Array.data[2]
-      value: "Enigma? J\xE1 ouvi essa palavra em algum lugar, \xE9 tipo uma cor de
-        esmalte n\xE9?"
+      value: Enigma? Ja ouvi essa palavra em algum lugar, eh tipo uma cor de esmalte
+        ne?
       objectReference: {fileID: 0}
     - target: {fileID: 7285836956294655518, guid: 3c13158e8366b524fa30a93a7d612d5b, type: 3}
       propertyPath: m_LocalPosition.x
