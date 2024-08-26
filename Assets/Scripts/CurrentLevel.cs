@@ -15,15 +15,12 @@ public class CurrentLevel : MonoBehaviour
 
     public void ChangeLevel(int n)
     {
-        if(currentLevel != n)
+        if (currentLevel != n)
         {
+            levelBlocks[currentLevel - 1].gameObject.SetActive(false);
             currentLevel = n;
             Camera.main.transform.position = levelsCameraPositions[currentLevel - 1].position;
             Camera.main.transform.rotation = levelsCameraPositions[currentLevel - 1].rotation;
-            foreach (GameObject block in levelBlocks)
-            {
-                block.gameObject.SetActive(false);
-            }
             levelBlocks[currentLevel - 1].gameObject.SetActive(true);
         }
     }

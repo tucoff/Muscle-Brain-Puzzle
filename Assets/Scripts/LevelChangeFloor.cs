@@ -11,6 +11,7 @@ public class LevelChangeFloor : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            Debug.Log("Entrou no nível " + level);
             currentLevel.ChangeLevel(level);
         }
     }
