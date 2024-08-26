@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3961987552357796374
+--- !u!1 &1389349070081016949
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1187851280181240271}
-  - component: {fileID: 5319909979913613350}
-  - component: {fileID: 4395898499402378323}
-  - component: {fileID: 7232652974398281826}
-  - component: {fileID: 7920449815352201598}
+  - component: {fileID: 6092423765025370493}
+  - component: {fileID: 3727797456042436455}
+  - component: {fileID: 3109597789503273334}
+  - component: {fileID: 4042258080709692597}
+  - component: {fileID: 2918996481162031802}
+  - component: {fileID: 8629553777432980953}
   m_Layer: 6
-  m_Name: Parede Fragil
-  m_TagString: Interactive
+  m_Name: Generator
+  m_TagString: Elemental
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1187851280181240271
+--- !u!4 &6092423765025370493
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3961987552357796374}
+  m_GameObject: {fileID: 1389349070081016949}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.48000002, z: 3.75}
-  m_LocalScale: {x: 1, y: 2, z: 2}
+  m_LocalPosition: {x: 6.34, y: -10.040001, z: 19.119999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5319909979913613350
+--- !u!33 &3727797456042436455
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3961987552357796374}
+  m_GameObject: {fileID: 1389349070081016949}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4395898499402378323
+--- !u!23 &3109597789503273334
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3961987552357796374}
+  m_GameObject: {fileID: 1389349070081016949}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f987813b65753514bbef268dae66b10b, type: 2}
+  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,13 +86,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7232652974398281826
+--- !u!65 &4042258080709692597
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3961987552357796374}
+  m_GameObject: {fileID: 1389349070081016949}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -106,13 +107,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7920449815352201598
+--- !u!114 &2918996481162031802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3961987552357796374}
+  m_GameObject: {fileID: 1389349070081016949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40822e849c72ba04fa4328d412767f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  element: 3
+--- !u!114 &8629553777432980953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389349070081016949}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b09fa6cf948437440a4ca25005283dc9, type: 3}
@@ -123,10 +137,12 @@ MonoBehaviour:
   elementNeeded: 0
   objectToInteract: {fileID: 0}
   interactions:
-  - Essa parede ta meio fofa, espero que consertem logo.
-  - VISH!!!! Acho que isso vai ser descontado do meu salario.
+  - "Mamae nao ia gostar de me ver mexendo com eletricidade\u2026"
+  - "Mamae nao ia gostar de me ver mexendo com eletricidade\u2026"
+  - "Mamae nao ia gostar de me ver mexendo com eletricidade\u2026"
   emotions:
   - {fileID: 1715136594, guid: ee879a932c15011419c86de5b801c7b0, type: 3}
-  - {fileID: 2059890269, guid: ee879a932c15011419c86de5b801c7b0, type: 3}
+  - {fileID: 1715136594, guid: ee879a932c15011419c86de5b801c7b0, type: 3}
+  - {fileID: 1715136594, guid: ee879a932c15011419c86de5b801c7b0, type: 3}
   interactionTime: 5
   audioClip: {fileID: 8300000, guid: 6aeff187eb95beb4c9abf346cdc50c2c, type: 3}
