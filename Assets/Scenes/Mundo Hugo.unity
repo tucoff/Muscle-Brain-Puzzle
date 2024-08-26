@@ -15055,6 +15055,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1862962057}
     m_Modifications:
+    - target: {fileID: 599870985917616317, guid: 76b9d29512a7f734bba1c5d6e0e56e0c, type: 3}
+      propertyPath: emotions.Array.data[0]
+      value: 
+      objectReference: {fileID: 2059890269, guid: ee879a932c15011419c86de5b801c7b0, type: 3}
+    - target: {fileID: 599870985917616317, guid: 76b9d29512a7f734bba1c5d6e0e56e0c, type: 3}
+      propertyPath: interactions.Array.data[0]
+      value: Nao posso arrombar ela, senao seria demitido.
+      objectReference: {fileID: 0}
     - target: {fileID: 783403269622824603, guid: 76b9d29512a7f734bba1c5d6e0e56e0c, type: 3}
       propertyPath: m_Name
       value: Porta Inquebravel
