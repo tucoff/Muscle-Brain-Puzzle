@@ -883,7 +883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5b3fc14c1e4bfb44836f5a6d383f30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nomeDoLevelDeJogo: Mundo Hugo
+  nomeDoLevelDeJogo: HQ
   painelMenuInicial: {fileID: 1600375842}
   painelOpcoes: {fileID: 0}
 --- !u!4 &1476206509

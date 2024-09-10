@@ -6947,7 +6947,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &433712851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25076,6 +25076,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8629553777432980953, guid: cb097143b5bb40447a3df467df066c09, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 354ddd98c9d1fc04f9c6356dc706cffe, type: 3}
     - target: {fileID: 8629553777432980953, guid: cb097143b5bb40447a3df467df066c09, type: 3}
       propertyPath: objectToInteract
       value: 
