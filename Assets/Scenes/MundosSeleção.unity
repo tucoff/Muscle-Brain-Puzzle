@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 425666245}
   - component: {fileID: 425666244}
   - component: {fileID: 425666243}
+  - component: {fileID: 425666246}
   m_Layer: 5
   m_Name: "Bot\xE3o do Meio"
   m_TagString: Untagged
@@ -338,18 +339,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 425666246}
+        m_TargetAssemblyTypeName: LevelChanger, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Mundo 2
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 1
 --- !u!114 &425666244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,6 +389,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 425666241}
   m_CullTransparentMesh: 1
+--- !u!114 &425666246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425666241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f753ee20acfcc40af2e16b06548f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &542064021
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +654,7 @@ GameObject:
   - component: {fileID: 888147283}
   - component: {fileID: 888147282}
   - component: {fileID: 888147281}
+  - component: {fileID: 888147284}
   m_Layer: 5
   m_Name: "Bot\xE3o de baixo"
   m_TagString: Untagged
@@ -712,18 +726,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuPrincipalManager, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 888147284}
+        m_TargetAssemblyTypeName: LevelChanger, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Mundo 3
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 1
 --- !u!114 &888147282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,6 +776,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888147279}
   m_CullTransparentMesh: 1
+--- !u!114 &888147284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888147279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f753ee20acfcc40af2e16b06548f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1234144731
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,6 +912,7 @@ MonoBehaviour:
   nomeDoLevelDeJogo: HQ
   painelMenuInicial: {fileID: 1600375842}
   painelOpcoes: {fileID: 0}
+  worldSelector: 1
 --- !u!4 &1476206509
 Transform:
   m_ObjectHideFlags: 0

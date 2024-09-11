@@ -9,6 +9,20 @@ public class MenuPrincipalManager : MonoBehaviour
    [SerializeField] private GameObject painelMenuInicial;
    [SerializeField] private GameObject painelOpcoes;
 
+   public bool worldSelector;
+
+   private void Start() {
+      if(worldSelector && PlayerPrefs.GetInt("World2") == 1)
+      {
+         painelMenuInicial.transform.GetChild(1).gameObject.GetComponent<UnityEngine.UI.Button>().interactable = true;
+      }
+      
+      if(worldSelector && PlayerPrefs.GetInt("World3") == 1)
+      {
+         painelMenuInicial.transform.GetChild(2).gameObject.GetComponent<UnityEngine.UI.Button>().interactable = true;
+      }
+   }
+
    public void Jogar()
    {
     SceneManager.LoadScene(nomeDoLevelDeJogo);

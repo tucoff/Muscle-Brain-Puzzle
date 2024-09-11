@@ -18,11 +18,14 @@ public class PlayerBehaviour : MonoBehaviour
     public bool luvas = false;
     public Rigidbody m_Rigidbody;
     public LayerMask wallLayer;
+    public GameObject particlePower;
 
 
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
+        particlePower = GameObject.FindWithTag("Power");
+        particlePower.SetActive(false);
     }
 
     //Move o player de bloco em bloco
@@ -110,6 +113,8 @@ public class PlayerBehaviour : MonoBehaviour
         {
             inUseElement = Element.Air;
             GameObject.FindWithTag("CurrentElement").GetComponent<Image>().color = Color.white;
+            particlePower.SetActive(false);
+            GameObject.Find("PlayerBody").GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 
@@ -130,13 +135,21 @@ public class PlayerBehaviour : MonoBehaviour
                 c = Color.red;
                 break;
             case Element.Ice:
-                c = Color.blue;
+                c = Color.cyan;
+                particlePower.SetActive(true);
+                particlePower.GetComponent<ParticleSystem>().startColor = Color.cyan;
+                GameObject.Find("PlayerBody").GetComponent<SpriteRenderer>().color = Color.cyan;
                 break;
             case Element.Lightning:
                 c = Color.yellow;
+                particlePower.SetActive(true);
+                particlePower.GetComponent<ParticleSystem>().startColor = Color.yellow;
+                GameObject.Find("PlayerBody").GetComponent<SpriteRenderer>().color = Color.yellow;
                 break;
             case Element.Air:
                 c = Color.white;
+                particlePower.SetActive(false);
+                GameObject.Find("PlayerBody").GetComponent<SpriteRenderer>().color = Color.white;
                 break;
         }
         GameObject.FindWithTag("CurrentElement").GetComponent<Image>().color = c;
