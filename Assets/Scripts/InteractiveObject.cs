@@ -45,10 +45,17 @@ public class InteractiveObject : MonoBehaviour
                 transform.GetChild(5).gameObject.SetActive(true);
             }
             
-            //Só funciona no código da porta, precisa ser modificado posteriormente
             if (objectToInteract != null)
             {
-                objectToInteract.SetActive(false);
+                if (elementNeeded == Element.Ice)
+                {
+                    gameObject.layer = 0;
+                    transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().enabled = true;
+                }
+                else if (elementNeeded == Element.Lightning)
+                {
+                    objectToInteract.SetActive(false);
+                }
             }
 
             GameObject.Find("Player").GetComponent<PlayerBehaviour>().inUseElement = Element.Air;

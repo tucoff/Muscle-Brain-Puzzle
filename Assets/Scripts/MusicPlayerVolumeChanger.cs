@@ -9,10 +9,14 @@ public class MusicPlayerVolumeChanger : MonoBehaviour
     public AudioSource voicePlayer;
     public Slider volumeSlider;
     public bool isVoicePlayer = false;
+    public bool test;
 
     void Start()
     {
-       musicPlayer = GameObject.FindWithTag("MusicPlayer").GetComponent<AudioSource>(); 
+        if(!test)
+        {
+            musicPlayer = GameObject.FindWithTag("MusicPlayer").GetComponent<AudioSource>();
+        } 
     }
 
     void FixedUpdate()
@@ -30,6 +34,9 @@ public class MusicPlayerVolumeChanger : MonoBehaviour
 
     public void SetVoiceVolume()
     {
-        voicePlayer.volume = musicPlayer.volume;
+        if (musicPlayer)
+        {
+            voicePlayer.volume = musicPlayer.volume;
+        }
     }
 }
