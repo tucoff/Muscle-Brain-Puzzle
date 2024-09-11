@@ -28637,6 +28637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72e79d0b29f751c4a9b7ec63ee5bd539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextWorld: 2
 --- !u!1001 &1885266410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29037,6 +29038,7 @@ MonoBehaviour:
   voicePlayer: {fileID: 1899946961}
   volumeSlider: {fileID: 0}
   isVoicePlayer: 1
+  test: 0
 --- !u!4 &1900962318 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1787177678692745047, guid: 9b21b78a76ac46649834c6d1e9bd7d7e, type: 3}

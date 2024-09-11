@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class NextWorld : MonoBehaviour
 {
+    public int nextWorld = 0;
+    
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")

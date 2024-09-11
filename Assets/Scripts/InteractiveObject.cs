@@ -44,7 +44,16 @@ public class InteractiveObject : MonoBehaviour
                 transform.GetChild(4).gameObject.SetActive(false);
                 transform.GetChild(5).gameObject.SetActive(true);
             }
-            
+            else if (gameObject.name == "Geladeira")
+            {
+                transform.GetChild(0).gameObject.SetActive(true);
+                gameObject.GetComponent<ElementalBehaviour>().element = Element.Ice;
+            }
+            else if (gameObject.name == "Cachoeira")
+            {
+                gameObject.GetComponent<MeshRenderer>().enabled = false;
+            }
+
             if (objectToInteract != null)
             {
                 if (elementNeeded == Element.Ice)
