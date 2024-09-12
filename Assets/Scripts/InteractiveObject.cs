@@ -72,6 +72,7 @@ public class InteractiveObject : MonoBehaviour
             GameObject particlePower = GameObject.FindWithTag("Power");
             particlePower.SetActive(false);
             GameObject.Find("PlayerBody").GetComponent<SpriteRenderer>().color = Color.white;
+            GameObject.Find("Puncher").GetComponent<SpriteRenderer>().color = Color.white;
         }
 
         if (isQuebravel && GameObject.Find("Player").GetComponent<PlayerBehaviour>().luvas && currentInUseElement == Element.Air)

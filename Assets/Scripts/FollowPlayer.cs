@@ -9,6 +9,7 @@ public class FollowPlayer : MonoBehaviour
     public bool walking = false;
     Vector3 playerPos = new Vector3(0, 0, 0);
     public bool animator;
+    public GameObject puncher;
 
     void FixedUpdate()
     {
@@ -30,11 +31,43 @@ public class FollowPlayer : MonoBehaviour
                 walking = false;
             }    
         }
-        
+
         if (animator)
         {
             Animate();
         }
+    }
+
+    public void Punch()
+    {
+        animator = false;
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        puncher.GetComponent<SpriteRenderer>().enabled = true;
+        StopAllCoroutines();
+        StartCoroutine(PunchCoroutine());
+        switch (GameObject.FindWithTag("Player").GetComponent<PlayerBehaviour>().direction)
+        {
+            case Directions.North:
+                puncher.GetComponent<Animator>().Play("PunchWandN");
+                break;
+            case Directions.East:  
+                puncher.GetComponent<Animator>().Play("PunchEandS");
+                break;
+            case Directions.South:
+                puncher.GetComponent<Animator>().Play("PunchEandS");  
+                break;
+            case Directions.West:
+                puncher.GetComponent<Animator>().Play("PunchWandN");
+                break;
+        }
+    }
+
+    IEnumerator PunchCoroutine()
+    {
+        yield return new WaitForSeconds(0.5f);
+        puncher.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        animator = true;
     }
 
     void Animate()

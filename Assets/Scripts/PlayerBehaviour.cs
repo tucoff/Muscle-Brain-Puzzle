@@ -102,6 +102,8 @@ public class PlayerBehaviour : MonoBehaviour
                 Invoke("NewElement", 0.1f);
             }
 
+            GameObject.FindWithTag("FollowPlayer").GetComponent<FollowPlayer>().Punch();
+
             if (objectInteracting != null)
             {
                 objectInteracting.GetComponent<InteractiveObject>().Interact(direction);
@@ -115,6 +117,7 @@ public class PlayerBehaviour : MonoBehaviour
             GameObject.FindWithTag("CurrentElement").GetComponent<Image>().color = Color.white;
             particlePower.SetActive(false);
             GameObject.Find("PlayerBody").GetComponent<SpriteRenderer>().color = Color.white;
+            GameObject.Find("Puncher").GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 
@@ -139,17 +142,20 @@ public class PlayerBehaviour : MonoBehaviour
                 particlePower.SetActive(true);
                 particlePower.GetComponent<ParticleSystem>().startColor = Color.cyan;
                 GameObject.Find("PlayerBody").GetComponent<SpriteRenderer>().color = Color.cyan;
+                GameObject.Find("Puncher").GetComponent<SpriteRenderer>().color = Color.cyan;
                 break;
             case Element.Lightning:
                 c = Color.yellow;
                 particlePower.SetActive(true);
                 particlePower.GetComponent<ParticleSystem>().startColor = Color.yellow;
                 GameObject.Find("PlayerBody").GetComponent<SpriteRenderer>().color = Color.yellow;
+                GameObject.Find("Puncher").GetComponent<SpriteRenderer>().color = Color.yellow;
                 break;
             case Element.Air:
                 c = Color.white;
                 particlePower.SetActive(false);
                 GameObject.Find("PlayerBody").GetComponent<SpriteRenderer>().color = Color.white;
+                GameObject.Find("Puncher").GetComponent<SpriteRenderer>().color = Color.white;
                 break;
         }
         GameObject.FindWithTag("CurrentElement").GetComponent<Image>().color = c;

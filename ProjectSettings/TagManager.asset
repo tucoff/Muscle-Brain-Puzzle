@@ -11,6 +11,7 @@ TagManager:
   - Walls
   - MusicPlayer
   - Power
+  - FollowPlayer
   layers:
   - Default
   - TransparentFX
